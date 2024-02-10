@@ -4,238 +4,309 @@ In this guide, fill in later
 
 ## Tools Used
 
-- Azure cloud
-- PuTTy
-- VirtualBox
-- T-Pot
+- 
 
 ## Environments Used
 
-- Windows 10 VM
+- 
 
 ## Part 1: Setup Lab Resources
 
-Step 1: Prepare for Deployment
+### Step 1: Prepare for Deployment
 
-    Ensure you have a free Azure subscription for deploying Microsoft Sentinel.
-    If you don't have an Azure account, register for one using the provided link.
-    Access the official GitHub repository for Sentinel all-in-one deployment provided in the resources.
+Ensure you have a free Azure subscription for deploying Microsoft Sentinel.
 
-Step 2: Understanding Sentinel All-in-One
+If you don't have an Azure account, register for one using the provided link.
 
-    Sentinel all-in-one is an official Microsoft solution designed to expedite the deployment process of Microsoft Sentinel.
-    Version two, released in April 2023, streamlines initial configuration tasks for Sentinel.
-    While manual configuration of Microsoft Sentinel is an option, this solution simplifies and accelerates the process significantly.
-    The deployment option encompasses various features, including workspace retention settings, daily cap, commitment tiers, user and entity behavior analytics, and health diagnostics for analytics rules and data connectors.
+*Access the official GitHub repository for Sentinel all-in-one deployment provided in the resources.*
 
-Step 3: Exploring Features
+### Step 2: Understanding Sentinel All-in-One
 
-    Content Hub solutions provided within the deployment offer pre-configured packages of analytics, rules, dashboards, and automation tasks specific to Microsoft Sentinel.
-    Data connectors from sources such as Azure Active Directory and Microsoft 365 Defender are enabled, facilitating immediate data ingestion from diverse sources.
-    Analytics rules utilizing selected data connectors with severity filtering are also activated.
+Sentinel all-in-one is an official Microsoft solution designed to expedite the deployment process of Microsoft Sentinel.
 
-Step 4: Deploying Microsoft Sentinel
+Version two, released in April 2023, streamlines initial configuration tasks for Sentinel.
 
-    Navigate to the deployment option provided in the GitHub repository.
-    Review the supported connectors listed, ensuring compatibility with your requirements.
-    Note that some connectors may require licenses, but this deployment project is entirely free.
-    Microsoft Sentinel offers ten gigabytes of free data ingestion per day for the first month, providing ample time to familiarize yourself with the platform.
-    Deploy Microsoft Sentinel to your Azure environment following the instructions provided in the repository.
+While manual configuration of Microsoft Sentinel is an option, this solution simplifies and accelerates the process significantly.
 
-Step 5: Post-Deployment Considerations
+The deployment option encompasses various features, including workspace retention settings, daily cap, commitment tiers, user and entity behavior analytics, and health diagnostics for analytics rules and data connectors.
 
-    Once Microsoft Sentinel is deployed and configured, explore its functionalities and capabilities.
-    Take advantage of the pre-configured analytics rules, dashboards, and automation tasks provided by Content Hub solutions.
-    In case of any questions or issues during deployment or usage, refer to the resources provided in the GitHub repository or seek assistance from Microsoft support.
+### Step 3: Exploring Features
+
+Content Hub solutions provided within the deployment offer pre-configured packages of analytics, rules, dashboards, and automation tasks specific to Microsoft Sentinel.
+
+Data connectors from sources such as Azure Active Directory and Microsoft 365 Defender are enabled, facilitating immediate data ingestion from diverse sources.
+
+Analytics rules utilizing selected data connectors with severity filtering are also activated.
+
+### Step 4: Deploying Microsoft Sentinel
+
+*Navigate to the deployment option provided in the GitHub repository.*
+
+*Review the supported connectors listed, ensuring compatibility with your requirements.*
+
+*Note that some connectors may require licenses, but this deployment project is entirely free.*
+
+*Microsoft Sentinel offers ten gigabytes of free data ingestion per day for the first month, providing ample time to familiarize yourself with the platform.*
+
+*Deploy Microsoft Sentinel to your Azure environment following the instructions provided in the repository.*
+
+### Step 5: Post-Deployment Considerations
+
+*Once Microsoft Sentinel is deployed and configured, explore its functionalities and capabilities.*
+
+*Take advantage of the pre-configured analytics rules, dashboards, and automation tasks provided by Content Hub solutions.*
+
+*In case of any questions or issues during deployment or usage, refer to the resources provided in the GitHub repository or seek assistance from Microsoft support.*
 
 By following these steps, you'll be able to efficiently deploy Microsoft Sentinel using the all-in-one solution, leveraging its features for enhanced threat detection and response capabilities within your Azure environment.
 
 ## Part 2: Create SIEM in Azure Cloud
 
-Step 1: Deploying Microsoft Sentinel
+### Step 1: Deploying Microsoft Sentinel
 
-    Click on the "Deploy to Azure" button to initiate the deployment process for Microsoft Sentinel.
-    This action redirects you to the Azure portal, where you'll deploy Microsoft Sentinel using a predefined template.
+*Click on the "Deploy to Azure" button to initiate the deployment process for Microsoft Sentinel.*
 
-Step 2: Selecting Location and Configuration
+*This action redirects you to the Azure portal, where you'll deploy Microsoft Sentinel using a predefined template.*
 
-    Choose the location for deployment, considering factors such as regulatory requirements and cost implications.
-    Opt for a location closest to your operational area. For example, North Europe.
-    Define the resource group and workspace name, ensuring they reflect the purpose of the solution. For this demonstration, name it "Security Monitoring."
+### Step 2: Selecting Location and Configuration
 
-Step 3: Setting Ingestion Limits and Data Retention
+*Choose the location for deployment, considering factors such as regulatory requirements and cost implications.*
 
-    Determine the daily ingestion limit in gigabytes. Since there's a ten-gigabyte free daily limit, input ten in this field.
-    Retain the default data retention period of 90 days, during which Microsoft stores data for free.
+*Opt for a location closest to your operational area. For example, North Europe.*
 
-Step 4: Configuring Settings
+*Define the resource group and workspace name, ensuring they reflect the purpose of the solution. For this demonstration, name it "Security Monitoring."*
 
-    Enable Sentinel Health Diagnostics under Settings to monitor the health of Microsoft Sentinel.
-    Optionally enable artificial intelligence and user/entity behavior analytics for advanced threat detection.
+### Step 3: Setting Ingestion Limits and Data Retention
 
-Step 5: Exploring Content Hub and Data Connectors
+*Determine the daily ingestion limit in gigabytes. Since there's a ten-gigabyte free daily limit, input ten in this field.*
 
-    Explore the Content Hub, which offers pre-configured solutions categorized into three sections.
-    Select all solutions within each category for comprehensive monitoring.
-    Choose data connectors based on your data sources, prioritizing Azure Active Directory for sign-in data.
-    Even if lacking licenses, select all data connectors for future scalability.
+*Retain the default data retention period of 90 days, during which Microsoft stores data for free.*
 
-Step 6: Enabling Analytics Rules
+### Step 4: Configuring Settings
 
-    Check the box to enable analytics rules, which automate threat detection.
-    Select severity levels such as low and information to encompass all threat categories.
+*Enable Sentinel Health Diagnostics under Settings to monitor the health of Microsoft Sentinel.*
 
-Step 7: Review and Deployment
+*Optionally enable artificial intelligence and user/entity behavior analytics for advanced threat detection.*
 
-    Review your settings to ensure they align with your requirements.
-    Proceed to create Microsoft Sentinel once validation passes.
-    Expect the deployment to take 10 to 15 minutes.
-    During deployment, you may encounter failures for specific connectors due to licensing constraints. However, this won't impact the overall functionality.
-    After deployment, explore your newly deployed Microsoft Sentinel together to understand its capabilities and available artifacts.
+### Step 5: Exploring Content Hub and Data Connectors
+
+*Explore the Content Hub, which offers pre-configured solutions categorized into three sections.*
+
+*Select all solutions within each category for comprehensive monitoring.*
+
+*Choose data connectors based on your data sources, prioritizing Azure Active Directory for sign-in data.*
+
+*Even if lacking licenses, select all data connectors for future scalability.*
+
+### Step 6: Enabling Analytics Rules
+
+*Check the box to enable analytics rules, which automate threat detection.*
+
+*Select severity levels such as low and information to encompass all threat categories.*
+
+### Step 7: Review and Deployment
+
+*Review your settings to ensure they align with your requirements.*
+
+*Proceed to create Microsoft Sentinel once validation passes.*
+
+*Expect the deployment to take 10 to 15 minutes.*
+
+*During deployment, you may encounter failures for specific connectors due to licensing constraints. However, this won't impact the overall functionality.*
+
+*After deployment, explore your newly deployed Microsoft Sentinel together to understand its capabilities and available artifacts.*
 
 By following these steps, you'll effectively deploy Microsoft Sentinel, enabling robust security monitoring within your Azure environment.
 
 ## Part 3: Exploring Deployed Cybersecurity Artifacts
 
-Step 1: Identifying the Deployment Error
+### Step 1: Identifying the Deployment Error
 
-    Despite successful deployment, an error related to data connectors requiring a license has been encountered.
-    Assure that other aspects of the deployment are correctly configured.
+*Despite successful deployment, an error related to data connectors requiring a license has been encountered.*
 
-Step 2: Accessing the Resource Group
+*Assure that other aspects of the deployment are correctly configured.*
 
-    Navigate to the Azure portal and search for "resource groups."
-    Select the resource group where Microsoft Sentinel was deployed, typically named according to its purpose, such as "monitoring."
+### Step 2: Accessing the Resource Group
 
-Step 3: Reviewing Resource Group Contents
+*Navigate to the Azure portal and search for "resource groups."*
 
-    Within the resource group, observe over 300 records comprising various services.
-    Key components include container instances, storage accounts, API connections, deployment scripts, and crucially, the log analytics workspace where all data is stored.
+*Select the resource group where Microsoft Sentinel was deployed, typically named according to its purpose, such as "monitoring."*
 
-Step 4: Exploring Templates
+### Step 3: Reviewing Resource Group Contents
 
-    Explore a template to understand its contents by clicking on it and selecting "Deploy."
-    Templates typically consist of display names and descriptions, such as "Threat Intelligence Analytics Rule template 35."
-    Recognize that deploying numerous templates manually can be time-consuming, underscoring the importance of automation.
+*Within the resource group, observe over 300 records comprising various services.*
 
-Step 5: Understanding Log Analytics Workspace
+*Key components include container instances, storage accounts, API connections, deployment scripts, and crucially, the log analytics workspace where all data is stored.*
 
-    Acknowledge that Microsoft Sentinel operates atop the log analytics workspace.
-    Monitoring the workspace is essential for detecting issues like query performance or execution errors.
-    Locate the log analytics workspace within the resource group and proceed.
+### Step 4: Exploring Templates
 
-Step 6: Configuring Diagnostic Settings
+*Explore a template to understand its contents by clicking on it and selecting "Deploy."*
 
-    Within the log analytics workspace, navigate to the monitoring section and select "Diagnostic settings."
-    Create a new diagnostic setting with a descriptive name like "Sentinel."
-    Choose to collect all logs and metrics.
-    Specify the destination as the log analytics workspace associated with Sentinel and save the settings.
+*Templates typically consist of display names and descriptions, such as "Threat Intelligence Analytics Rule template 35."*
+
+*Recognize that deploying numerous templates manually can be time-consuming, underscoring the importance of automation.*
+
+### Step 5: Understanding Log Analytics Workspace
+
+*Acknowledge that Microsoft Sentinel operates atop the log analytics workspace.*
+
+*Monitoring the workspace is essential for detecting issues like query performance or execution errors.*
+
+*Locate the log analytics workspace within the resource group and proceed.*
+
+### Step 6: Configuring Diagnostic Settings
+
+*Within the log analytics workspace, navigate to the monitoring section and select "Diagnostic settings."*
+
+*Create a new diagnostic setting with a descriptive name like "Sentinel."*
+
+*Choose to collect all logs and metrics.*
+
+*Specify the destination as the log analytics workspace associated with Sentinel and save the settings.*
 
 Step 7: Moving Forward to Microsoft Sentinel
 
-    With diagnostic settings configured, transition to exploring Microsoft Sentinel itself, the cloud SIEM solution.
-    Await the next video installment for an in-depth exploration of Microsoft Sentinel's features and functionalities.
+*With diagnostic settings configured, transition to exploring Microsoft Sentinel itself, the cloud SIEM solution.*
+
+*Await the next video installment for an in-depth exploration of Microsoft Sentinel's features and functionalities.*
 
 Following these steps ensures a comprehensive understanding of the deployment process and sets the stage for effective monitoring and management of Microsoft Sentinel and associated resources.
 
 ## Part 4: Exploring Created Cloud SIEM Solution
 
-Step 1: Accessing Microsoft Sentinel
+### Step 1: Accessing Microsoft Sentinel
 
-    Without delay, proceed to Microsoft Sentinel by searching for it and selecting your deployment.
-    Upon arrival at the overview section, gain insight into basic information about Microsoft Sentinel.
-    Utilize the left-hand menu, categorized into four sections: General, Management, Content Management, and Configuration.
+*Without delay, proceed to Microsoft Sentinel by searching for it and selecting your deployment.*
 
-Step 2: Exploring Logs
+*Upon arrival at the overview section, gain insight into basic information about Microsoft Sentinel.*
 
-    Navigate to the "Logs" tab to search for data using the Kusto Query Language (KQL).
-    Data is organized into various tables, accessible by clicking the triangle icon.
-    Note that some tables may not yet be present due to incomplete data ingestion.
-    Explore tables such as Azure Activity and Interactive User Sign-Ins, providing insights into portal actions and authentication details.
+*Utilize the left-hand menu, categorized into four sections: General, Management, Content Management, and Configuration.*
 
-Step 3: Understanding Data Connectors
+### Step 2: Exploring Logs
 
-    Observe the status of data connectors, typically ranging from 9 to 10 connected connectors.
-    Filter connectors by status to view all data sources linked to Microsoft Sentinel.
-    Click on each connector for detailed information, including data type, log count, and populated tables.
+*Navigate to the "Logs" tab to search for data using the Kusto Query Language (KQL).*
 
-Step 4: Analyzing Analytics
+*Data is organized into various tables, accessible by clicking the triangle icon.*
 
-    Navigate to the "Analytics" tab, where the core detection rules are implemented.
-    Benefit from the deployment of 339 detection rules, aiding in threat monitoring and detection.
-    Review examples of detection rules, such as network port sweeps and suspicious application content.
-    Acknowledge the importance of these rules in initiating threat detection within Microsoft Sentinel.
+*Note that some tables may not yet be present due to incomplete data ingestion.*
 
-Step 5: Addressing Anomalies
+*Explore tables such as Azure Activity and Interactive User Sign-Ins, providing insights into portal actions and authentication details.*
 
-    Explore the "Anomalies" section, where robust anomaly detection templates are employed.
-    Recognize the use of user and entity behavior analytics (UEBA) for anomaly detection.
-    Prepare to address any anomalies and fine-tune thresholds to minimize false positives.
-    Note the current issue with UEBA and prioritize resolving it as the initial task within Microsoft Sentinel.
+### Step 3: Understanding Data Connectors
+
+*Observe the status of data connectors, typically ranging from 9 to 10 connected connectors.*
+
+*Filter connectors by status to view all data sources linked to Microsoft Sentinel.*
+
+*Click on each connector for detailed information, including data type, log count, and populated tables.*
+
+### Step 4: Analyzing Analytics
+
+*Navigate to the "Analytics" tab, where the core detection rules are implemented.*
+
+*Benefit from the deployment of 339 detection rules, aiding in threat monitoring and detection.*
+
+*Review examples of detection rules, such as network port sweeps and suspicious application content.*
+
+*Acknowledge the importance of these rules in initiating threat detection within Microsoft Sentinel.*
+
+### Step 5: Addressing Anomalies
+
+*Explore the "Anomalies" section, where robust anomaly detection templates are employed.*
+
+*Recognize the use of user and entity behavior analytics (UEBA) for anomaly detection.*
+
+*Prepare to address any anomalies and fine-tune thresholds to minimize false positives.*
+
+*Note the current issue with UEBA and prioritize resolving it as the initial task within Microsoft Sentinel.*
 
 By following these steps, you gain insight into the key functionalities and components of Microsoft Sentinel, setting the stage for effective threat monitoring and management.
 
 ## Part 5: Enable Artificial Intelligence in SIEM
 
-Step 1: Enabling User and Entity Behavior Analytics (UEBA)
+### Step 1: Enabling User and Entity Behavior Analytics (UEBA)
 
-    Begin by exploring the User and Entity Behavior Analytics (UEBA) feature, which utilizes AI to detect and alert users to any unusual behavior within the system.
-    Access the settings section to enable this feature. Navigate to settings and locate the "User and Entity Behavior Analytics" button.
-    Click on "User and Entity Behavior Analytics" and proceed to select "Azure Active Directory," applying it to existing data sources to activate the AI-powered detection capabilities.
+*Begin by exploring the User and Entity Behavior Analytics (UEBA) feature, which utilizes AI to detect and alert users to any unusual behavior within the system.*
 
-Step 2: Configuring Automation Playbooks
+*Access the settings section to enable this feature. Navigate to settings and locate the "User and Entity Behavior Analytics" button.*
 
-    While in the settings section, configure Microsoft Sentinel to use automation playbooks for enhanced operational efficiency.
-    Grant permissions to Microsoft Sentinel by navigating back one page and selecting the arrow next to the playbook permission option.
-    Choose the resource group where Microsoft Sentinel is deployed and apply the necessary changes to configure permissions effectively.
+*Click on "User and Entity Behavior Analytics" and proceed to select "Azure Active Directory," applying it to existing data sources to activate the AI-powered detection capabilities.*
 
-Step 3: Finalizing Setup
+### Step 2: Configuring Automation Playbooks
 
-    With UEBA enabled and automation playbooks configured, Microsoft Sentinel is now equipped with powerful capabilities.
-    Prepare to create impactful artifacts within Microsoft Sentinel to enhance security operations and streamline workflows.
+*While in the settings section, configure Microsoft Sentinel to use automation playbooks for enhanced operational efficiency.*
+
+*Grant permissions to Microsoft Sentinel by navigating back one page and selecting the arrow next to the playbook permission option.*
+
+*Choose the resource group where Microsoft Sentinel is deployed and apply the necessary changes to configure permissions effectively.*
+
+### Step 3: Finalizing Setup
+
+*With UEBA enabled and automation playbooks configured, Microsoft Sentinel is now equipped with powerful capabilities.*
+
+*Prepare to create impactful artifacts within Microsoft Sentinel to enhance security operations and streamline workflows.*
 
 By following these steps, you have successfully enabled UEBA and configured automation playbooks within Microsoft Sentinel, setting the stage for enhanced security monitoring and response capabilities. Stay tuned for the next video, where you'll delve into the creation and utilization of watchlists to further bolster your security operations.
 
 ## Part 6: Creating a Watchlist to Detect Cybersecurity Threats
 
-Step 1: Creating a Watchlist for Tor Exit Nodes
+### Step 1: Creating a Watchlist for Tor Exit Nodes
 
-    Begin by navigating to the watchlist section in the configuration menu of Microsoft Sentinel.
-    Click on "Add New" to create a new watchlist.
-    Provide a name for the watchlist, such as "Tor Exit Nodes," and an alias that is easy to remember and will be used later in analytics rules.
-    You have the option to create the watchlist from a local file or from Azure Storage. Download the prepared CSV file containing all the Tor exit node IP addresses and drag it into the appropriate field.
-    Validate the file preview to ensure correctness, then select a unique search key to optimize query performance.
-    Review the configuration and proceed to create the watchlist. Upon successful validation, create the watchlist, which will be available for immediate use.
+*Begin by navigating to the watchlist section in the configuration menu of Microsoft Sentinel.*
+
+*Click on "Add New" to create a new watchlist.*
+
+*Provide a name for the watchlist, such as "Tor Exit Nodes," and an alias that is easy to remember and will be used later in analytics rules.*
+
+*You have the option to create the watchlist from a local file or from Azure Storage. Download the prepared CSV file containing all the Tor exit node IP addresses and drag it into the appropriate field.*
+
+*Validate the file preview to ensure correctness, then select a unique search key to optimize query performance.*
+
+*Review the configuration and proceed to create the watchlist. Upon successful validation, create the watchlist, which will be available for immediate use.*
 
 Step 2: Viewing and Modifying Watchlists
 
-    After creating the watchlist, you can view it by selecting it from the watchlist section. Click on "View watchlist logs" to see the watchlist's contents presented in a SQL query syntax format.
-    Watchlists are easily modifiable. You can update them by selecting "Update watchlists" and "Edit watchlist items." This feature is particularly useful when multiple analytics rules use the same information, allowing for centralized updates.
+*After creating the watchlist, you can view it by selecting it from the watchlist section. Click on "View watchlist logs" to see the watchlist's contents presented in a SQL query syntax format.*
+
+*Watchlists are easily modifiable. You can update them by selecting "Update watchlists" and "Edit watchlist items." This feature is particularly useful when multiple analytics rules use the same information, allowing for centralized updates.*
 
 Step 3: Moving Forward
 
-    With the watchlist for Tor exit nodes created and functional, the next step is to create an analytics rule to detect threats originating from the Tor network.
-    Stay tuned for the next section, where we will dive into creating our first analytics rule to enhance threat detection capabilities within Microsoft Sentinel.
+*With the watchlist for Tor exit nodes created and functional, the next step is to create an analytics rule to detect threats originating from the Tor network.*
+
+*Stay tuned for the next section, where we will dive into creating our first analytics rule to enhance threat detection capabilities within Microsoft Sentinel.*
 
 By following these steps, you have successfully created a watchlist for monitoring Tor exit nodes in Microsoft Sentinel, setting the stage for proactive threat detection and response. Stay tuned for the next video, where we'll continue to strengthen your security operations with analytics rules.
 
 ## Part 7: Creating a Detection Rule For Cybersecurity Threat
 
-Step 1: Creating an Analytics Rule to Detect Threats from Tor Network
+### Step 1: Creating an Analytics Rule to Detect Threats from Tor Network
 
-    Navigate to the configuration section of Microsoft Sentinel and select "Analytics."
-    Choose to add a new scheduled query rule.
-    Provide an appropriate name for the rule, such as "Successful Sign-ins from Tor Network," and specify the relevant tactics and techniques. Adjust the severity level as needed.
-    In the rule logic section, utilize Kql (Kusto Query Language) to specify the criteria for detecting threats. Begin by calling the watchlist function to retrieve a list of IP addresses.
-    Specify the table to be used for data retrieval, such as the signing log table, which contains all signing events.
-    Refine the query to filter results based on the IP address field and include only matches found in the watchlist.
-    Further filter results for failed logins and customize the columns to display using the project argument.
-    Test the query with current data to evaluate potential alerts generated per day.
-    In the alert enrichment section, map entities such as account (user ID and display name) and IP address (address).
-    Customize alert details by adding fields such as IP address and user account name to the alert name and description.
-    Configure query scheduling to run at specified intervals and look for data within a defined timeframe.
-    Proceed to incident settings, enabling incident creation from alerts and enabling alert grouping to group alerts with matching IP addresses and usernames into the same incident.
-    Review and create the analytics rule, ensuring that all settings are configured correctly.
+*Navigate to the configuration section of Microsoft Sentinel and select "Analytics."*
+
+*Choose to add a new scheduled query rule.*
+
+*Provide an appropriate name for the rule, such as "Successful Sign-ins from Tor Network," and specify the relevant tactics and techniques. Adjust the severity level as needed.*
+
+*In the rule logic section, utilize Kql (Kusto Query Language) to specify the criteria for detecting threats. Begin by calling the watchlist function to retrieve a list of IP addresses.*
+
+*Specify the table to be used for data retrieval, such as the signing log table, which contains all signing events.
+
+*Refine the query to filter results based on the IP address field and include only matches found in the watchlist.*
+
+*Further filter results for failed logins and customize the columns to display using the project argument.*
+
+*Test the query with current data to evaluate potential alerts generated per day.*
+
+*In the alert enrichment section, map entities such as account (user ID and display name) and IP address (address).*
+
+*Customize alert details by adding fields such as IP address and user account name to the alert name and description.*
+
+*Configure query scheduling to run at specified intervals and look for data within a defined timeframe.*
+
+*Proceed to incident settings, enabling incident creation from alerts and enabling alert grouping to group alerts with matching IP addresses and usernames into the same incident.*
+
+*Review and create the analytics rule, ensuring that all settings are configured correctly.*
 
 Step 2: Testing and Verification
 
