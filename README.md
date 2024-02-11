@@ -310,59 +310,83 @@ By following these steps, you have successfully created a watchlist for monitori
 
 Step 2: Testing and Verification
 
-    After creating the analytics rule, search for it in Microsoft Sentinel to confirm its creation.
-    Upon successful creation, proceed to test the rule by creating a new account and signing in from an anonymous IP address, triggering the analytics rule to detect the threat.
+*After creating the analytics rule, search for it in Microsoft Sentinel to confirm its creation.*
+
+*Upon successful creation, proceed to test the rule by creating a new account and signing in from an anonymous IP address, triggering the analytics rule to detect the threat.*
 
 By following these steps, you have successfully created an analytics rule in Microsoft Sentinel to detect threats originating from the Tor network. Stay tuned for the next video, where we'll test the rule and explore its effectiveness in threat detection.
 
 ## Part 8: Creating a User Account in Azure for SIEM Investigation
 
-Step 1: Preparation and Account Creation
+### Step 1: Preparation and Account Creation
 
-    Start by disabling security defaults in Azure AD to avoid any potential interruptions. Navigate to Azure Active Directory and select "Properties." Scroll down to "Manage Security Defaults" and change the status from enabled to disabled. Provide a reason, such as "testing," and save the changes.
-    With security defaults disabled, proceed to create a new user account. Navigate to "Users" under "Manage" in Azure AD, then select "Create new user." Enter a user principal name (e.g., Ozai), generate a new password, and enable the account. Fill in basic details such as job title and company name.
-    After completing the user creation process, copy the user principal name and password for future use.
+*Start by disabling security defaults in Azure AD to avoid any potential interruptions.*
 
-Step 2: Role Assignment
+*Navigate to Azure Active Directory and select "Properties." Scroll down to "Manage Security Defaults" and change the status from enabled to disabled. Provide a reason, such as "testing," and save the changes.*
 
-    Assign roles to the newly created user. Go back to the user list, select the created user, and click on "Add assignment" under the "Manage" section. Search for roles such as "Security Reader" and "Contributor" for Azure resources.
-    Assign the appropriate roles, ensuring that the user has the necessary permissions for the intended tasks.
+*With security defaults disabled, proceed to create a new user account.*
+
+*Navigate to "Users" under "Manage" in Azure AD, then select "Create new user."*
+
+*Enter a user principal name (e.g., Ozai), generate a new password, and enable the account. Fill in basic details such as job title and company name.*
+
+*After completing the user creation process, copy the user principal name and password for future use.*
+
+### Step 2: Role Assignment
+
+*Assign roles to the newly created user.*
+*Go back to the user list, select the created user, and click on "Add assignment" under the "Manage" section.*
+*Search for roles such as "Security Reader" and "Contributor" for Azure resources.*
+
+*Assign the appropriate roles, ensuring that the user has the necessary permissions for the intended tasks.*
 
 Step 3: Logging In and Testing
 
-    Log in to the newly created account using the provided credentials. Use a different browser window for distinction.
-    Attempt to log in with both a secure and insecure password to observe Microsoft's password policy in action.
-    Access Azure resources and verify that the user has the expected permissions, including access to Azure Active Directory and the designated resource group.
-    Confirm that multi-factor authentication (MFA) is disabled for the account to assess Microsoft Sentinel's detection capabilities.
+*Log in to the newly created account using the provided credentials. Use a different browser window for distinction.*
+
+*Attempt to log in with both a secure and insecure password to observe Microsoft's password policy in action.*
+
+*Access Azure resources and verify that the user has the expected permissions, including access to Azure Active Directory and the designated resource group.*
+
+*Confirm that multi-factor authentication (MFA) is disabled for the account to assess Microsoft Sentinel's detection capabilities.*
 
 By following these steps, you have prepared the environment and created a new user account for testing purposes. Proceed to log in and perform various activities to evaluate Microsoft Sentinel's ability to detect any unusual or potentially malicious behavior.
 
 ## Part 9: Infiltrating User Account to Generate Incidents in SIEM
 
-Step 1: Accessing Azure Portal
+### Step 1: Accessing Azure Portal
 
-    Put on the hacker hat and open the Brave browser for anonymity.
-    Create a new private window with Tor in the Brave browser.
-    Access the Azure portal and use the credentials of the newly created account to log in.
+*Put on the hacker hat and open the Brave browser for anonymity.*
 
-Step 2: Perform Malicious Activities
+*Create a new private window with Tor in the Brave browser.*
 
-    As an attacker, establish persistence by changing the password. Navigate to the account settings and select "Change password." Provide the old and a new complex password.
-    Disable diagnostic settings in the resource group and Microsoft Sentinel to avoid detection. Delete diagnostic settings for both.
-    Attempt to tamper with auditing and health monitoring settings in Microsoft Sentinel. Try clicking on "Configure" to access settings.
-    Consider using the Azure Portal's Web shell interface to run scripts for escalating privileges or performing crypto mining activities.
-    Optionally, create a virtual machine (VM) for generating additional logs in the environment. Choose a generic name to conceal actions.
+*Access the Azure portal and use the credentials of the newly created account to log in.*
 
-Step 3: Accessing Cloud Shell
+### Step 2: Perform Malicious Activities
 
-    Click on the Cloud Shell button and select PowerShell.
-    Attempt to create a new storage account to store files and scripts. Use existing resource groups if necessary.
+*As an attacker, establish persistence by changing the password. Navigate to the account settings and select "Change password." Provide the old and a new complex password.*
 
-Step 4: Wait for Detection
+*Disable diagnostic settings in the resource group and Microsoft Sentinel to avoid detection. Delete diagnostic settings for both.*
 
-    After performing malicious activities, wait for Microsoft Sentinel to detect threats. Detection rules run every five minutes.
-    Take a break and return later to explore newly created incidents in Microsoft Sentinel.
-    Prepare to respond to detected threats effectively in the next steps.
+*Attempt to tamper with auditing and health monitoring settings in Microsoft Sentinel. Try clicking on "Configure" to access settings.*
+
+*Consider using the Azure Portal's Web shell interface to run scripts for escalating privileges or performing crypto mining activities.*
+
+*Optionally, create a virtual machine (VM) for generating additional logs in the environment. Choose a generic name to conceal actions.*
+
+### Step 3: Accessing Cloud Shell
+
+*Click on the Cloud Shell button and select PowerShell.*
+
+*Attempt to create a new storage account to store files and scripts. Use existing resource groups if necessary.*
+
+### Step 4: Wait for Detection
+
+*After performing malicious activities, wait for Microsoft Sentinel to detect threats. Detection rules run every five minutes.*
+
+*Take a break and return later to explore newly created incidents in Microsoft Sentinel.*
+
+*Prepare to respond to detected threats effectively in the next steps.*
 
 By following these steps, you can simulate malicious activities and assess Microsoft Sentinel's ability to detect and respond to security threats effectively.
 
@@ -370,32 +394,38 @@ By following these steps, you can simulate malicious activities and assess Micro
 
 Investigating Incidents in Microsoft Sentinel
 
-    Accessing Incidents Dashboard:
-        Open Microsoft Sentinel.
-        Observe that there are 17 new incidents in the dashboard.
-        Note that the incidents are in the "New" state, indicating that no one is currently working on them.
-        Choose to manage incidents or navigate through the threat management tab to access incidents.
+Accessing Incidents Dashboard:
 
-    Prioritizing Incidents:
-        Prioritize incidents based on severity, with a focus on those with the highest severity.
-        For example, prioritize incidents related to successful sign-ins from the Tor network due to their potential impact.
+Open Microsoft Sentinel.
+Observe that there are 17 new incidents in the dashboard.
+Note that the incidents are in the "New" state, indicating that no one is currently working on them.
+Choose to manage incidents or navigate through the threat management tab to access incidents.
 
-    Reviewing Incident Details:
-        Observe that incidents include various types of security alerts, such as user account creation without expected attributes, service principal authentication attempts from new countries, anomalous single-factor sign-ins, etc.
-        Investigate each incident to understand its nature and potential correlation with others.
+Prioritizing Incidents:
 
-    Identifying Correlation Issues:
-        Note that incidents lack entities, which hinders correlation and consolidation of related alerts.
-        Understand that proper entity configuration is crucial for effective incident correlation.
+Prioritize incidents based on severity, with a focus on those with the highest severity.
+For example, prioritize incidents related to successful sign-ins from the Tor network due to their potential impact.
 
-    Starting the Investigation:
-        Select multiple incidents for investigation by clicking on the checkbox next to each incident.
-        Click on "Action" and assign the incidents to yourself, changing their status to "Active" to initiate investigation.
-        Establish accountability by ensuring clear ownership of each incident.
+Reviewing Incident Details:
 
-    Initiating Investigation Process:
-        Click on any selected incident to view its brief description.
-        Choose to view full details to access comprehensive information about the incident, including affected entities, timestamps, and severity.
+Observe that incidents include various types of security alerts, such as user account creation without expected attributes, service principal authentication attempts from new countries, anomalous single-factor sign-ins, etc.
+Investigate each incident to understand its nature and potential correlation with others.
+
+Identifying Correlation Issues:
+
+Note that incidents lack entities, which hinders correlation and consolidation of related alerts.
+Understand that proper entity configuration is crucial for effective incident correlation.
+
+Starting the Investigation:
+
+Select multiple incidents for investigation by clicking on the checkbox next to each incident.
+Click on "Action" and assign the incidents to yourself, changing their status to "Active" to initiate investigation.
+Establish accountability by ensuring clear ownership of each incident.
+
+Initiating Investigation Process:
+
+Click on any selected incident to view its brief description.
+Choose to view full details to access comprehensive information about the incident, including affected entities, timestamps, and severity.
 
 By following these steps, you can effectively navigate and investigate incidents in Microsoft Sentinel, ensuring prompt response and resolution to potential security threats.
 
@@ -403,38 +433,46 @@ By following these steps, you can effectively navigate and investigate incidents
 
 Investigating Incidents in Microsoft Sentinel
 
-    Incident Overview:
-        The incident window is divided into three sections.
-        On the left side, essential details about the incident are displayed, including a brief summary and information about the entities involved, such as the username and IP address.
+Incident Overview:
 
-    Accessing Evidence:
-        Evidence includes events, alerts, and bookmarks related to the incident.
-        Clicking on any entity reveals more details. For example, clicking on events reveals specific events related to the incident.
+The incident window is divided into three sections.
+On the left side, essential details about the incident are displayed, including a brief summary and information about the entities involved, such as the username and IP address.
 
-    Verifying IP Address:
-        Copy the IP address associated with the incident and check it using a freely available service like Abuse IPDB.
-        Confirm that the IP address is related to Tor exit nodes and view relevant reports.
+Accessing Evidence:
 
-    Adjusting Query for Result Type:
-        Notice that the log doesn't indicate a successful login due to a flaw in the query.
-        Remove the project argument from the query to display the result type.
-        Confirm that the login was successful.
+Evidence includes events, alerts, and bookmarks related to the incident.
+Clicking on any entity reveals more details. For example, clicking on events reveals specific events related to the incident.
 
-    Analyzing User Login History:
-        Adjust the query to check the user's login history for the past week.
-        Examine the login locations and identify any anomalies, such as logins from different countries or Tor exit nodes.
+Verifying IP Address:
 
-    Investigating User Activities:
-        Explore other activities related to the user, such as role assignments and Azure activity.
-        Use the entity behavior section to search for and select the user to view all activities in one place.
+Copy the IP address associated with the incident and check it using a freely available service like Abuse IPDB.
+Confirm that the IP address is related to Tor exit nodes and view relevant reports.
 
-    Reviewing Azure Activity Logs:
-        Analyze Azure activity logs to understand the user's actions, such as attempts to delete resource diagnostic settings and create storage accounts.
-        Identify successful and unsuccessful actions performed by the user.
+Adjusting Query for Result Type:
 
-    Deciding Next Actions:
-        Consider the user's department and role responsibilities to determine if the activities are suspicious.
-        Decide to disable the account to prevent further unauthorized access and lateral movement.
+Notice that the log doesn't indicate a successful login due to a flaw in the query.
+Remove the project argument from the query to display the result type.
+Confirm that the login was successful.
+
+Analyzing User Login History:
+
+Adjust the query to check the user's login history for the past week.
+Examine the login locations and identify any anomalies, such as logins from different countries or Tor exit nodes.
+
+Investigating User Activities:
+
+Explore other activities related to the user, such as role assignments and Azure activity.
+Use the entity behavior section to search for and select the user to view all activities in one place.
+
+Reviewing Azure Activity Logs:
+
+Analyze Azure activity logs to understand the user's actions, such as attempts to delete resource diagnostic settings and create storage accounts.
+Identify successful and unsuccessful actions performed by the user.
+
+Deciding Next Actions:
+
+Consider the user's department and role responsibilities to determine if the activities are suspicious.
+Decide to disable the account to prevent further unauthorized access and lateral movement.
 
 By following these steps, you can thoroughly investigate incidents in Microsoft Sentinel and take appropriate actions to secure your system.
 
@@ -442,29 +480,34 @@ By following these steps, you can thoroughly investigate incidents in Microsoft 
 
 Securing Your Azure Environment
 
-    Disabling Compromised Account:
-        Access Azure Active Directory and navigate to the users section.
-        Locate the compromised account by its acronym (e.g., O.C.).
-        Click on the account and choose the option to edit.
-        Uncheck the "enable" status and save the changes to disable the account.
+Disabling Compromised Account:
 
-    Deleting Virtual Machine:
-        Search for virtual machines in Azure.
-        Locate the VM that poses a threat and delete the resource.
+Access Azure Active Directory and navigate to the users section.
+Locate the compromised account by its acronym (e.g., O.C.).
+Click on the account and choose the option to edit.
+Uncheck the "enable" status and save the changes to disable the account.
 
-    Enabling Diagnostic Settings:
-        Search for a log analytics workspace and select the instance.
-        Add diagnostic settings to enable logging for all relevant logs.
-        Set the destination as the log analytics workspace for Microsoft Sentinel and save the changes.
+Deleting Virtual Machine:
 
-    Enabling Auditing and Health Monitoring in Sentinel:
-        Access Microsoft Sentinel from the dashboard and navigate to settings.
-        Enable auditing and health monitoring to ensure comprehensive monitoring of the environment.
+Search for virtual machines in Azure.
+Locate the VM that poses a threat and delete the resource.
 
-    Closing Incidents:
-        Close all incidents assigned for investigation.
-        Select the incidents, click on actions, and change the status to closed.
-        Choose the appropriate classification reason (e.g., true positive, suspicious activity).
-        Add a comment summarizing the findings and actions taken before applying the changes.
+Enabling Diagnostic Settings:
+
+Search for a log analytics workspace and select the instance.
+Add diagnostic settings to enable logging for all relevant logs.
+Set the destination as the log analytics workspace for Microsoft Sentinel and save the changes.
+
+Enabling Auditing and Health Monitoring in Sentinel:
+
+Access Microsoft Sentinel from the dashboard and navigate to settings.
+Enable auditing and health monitoring to ensure comprehensive monitoring of the environment.
+
+Closing Incidents:
+
+Close all incidents assigned for investigation.
+Select the incidents, click on actions, and change the status to closed.
+Choose the appropriate classification reason (e.g., true positive, suspicious activity).
+Add a comment summarizing the findings and actions taken before applying the changes.
 
 By following these steps, you have effectively identified and remediated a threat within your Azure environment using Microsoft Sentinel. Adding comments to incidents and maintaining a record of findings is essential for future investigations and knowledge sharing among analysts. Closing incidents ensures that all identified threats are properly addressed and mitigated.
