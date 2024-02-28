@@ -4,12 +4,12 @@ In this guide, we'll dive into deploying a security information and event manage
 
 ## Tools Used
 
-- 
+- Azure cloud
+- Microsoft Sentinel
 
 ## Environments Used
 
-- Azure cloud
-- Microsoft Sentinel
+- 
 
 ## Part 1: Setup Lab Resources
 
@@ -87,13 +87,7 @@ This action redirects you to the Azure portal, where you'll deploy Microsoft Sen
 
 *Proceed to create Microsoft Sentinel once validation passes.*
 
-*Expect the deployment to take 10 to 15 minutes.*
-
-*During deployment, you may encounter failures for specific connectors due to licensing constraints. However, this won't impact the overall functionality.*
-
-*After deployment, explore your newly deployed Microsoft Sentinel together to understand its capabilities and available artifacts.*
-
-By following these steps, you'll effectively deploy Microsoft Sentinel, enabling robust security monitoring within your Azure environment.
+During deployment, you may encounter failures for specific connectors due to licensing constraints. However, this won't impact the overall functionality.
 
 ## Part 3: Exploring Deployed Cybersecurity Artifacts
 
@@ -107,29 +101,33 @@ By following these steps, you'll effectively deploy Microsoft Sentinel, enabling
 
 *Navigate to the Azure portal and search for "resource groups."*
 
-*Select the resource group where Microsoft Sentinel was deployed, typically named according to its purpose, such as "monitoring."*
+![image](https://i.imgur.com/P775AoI.png)
+
+*Select the resource group where Microsoft Sentinel was deployed, typically named according to its purpose, such as "monitoring"*
 
 ### Step 3: Reviewing Resource Group Contents
 
 *Within the resource group, observe over 300 records comprising various services.*
 
+![image](https://i.imgur.com/0afPhlV.png)
+
 *Key components include container instances, storage accounts, API connections, deployment scripts, and crucially, the log analytics workspace where all data is stored.*
 
 ### Step 4: Exploring Templates
 
-*Explore a template to understand its contents by clicking on it and selecting "Deploy."*
+Explore a template to understand its contents by clicking on it and selecting "Deploy."
 
-*Templates typically consist of display names and descriptions, such as "Threat Intelligence Analytics Rule template 35."*
+Templates typically consist of display names and descriptions, such as "Threat Intelligence Analytics Rule template 35."
 
-*Recognize that deploying numerous templates manually can be time-consuming, underscoring the importance of automation.*
+Recognize that deploying numerous templates manually can be time-consuming, underscoring the importance of automation.
 
 ### Step 5: Understanding Log Analytics Workspace
 
-*Acknowledge that Microsoft Sentinel operates atop the log analytics workspace.*
+Acknowledge that Microsoft Sentinel operates atop the log analytics workspace.
 
-*Monitoring the workspace is essential for detecting issues like query performance or execution errors.*
+Monitoring the workspace is essential for detecting issues like query performance or execution errors.
 
-*Locate the log analytics workspace within the resource group and proceed.*
+Locate the log analytics workspace within the resource group and proceed.
 
 ### Step 6: Configuring Diagnostic Settings
 
@@ -139,37 +137,39 @@ By following these steps, you'll effectively deploy Microsoft Sentinel, enabling
 
 *Choose to collect all logs and metrics.*
 
+![image](https://i.imgur.com/Xpc5Hqo.png)
+
 *Specify the destination as the log analytics workspace associated with Sentinel and save the settings.*
-
-Step 7: Moving Forward to Microsoft Sentinel
-
-*With diagnostic settings configured, transition to exploring Microsoft Sentinel itself, the cloud SIEM solution.*
-
-*Await the next video installment for an in-depth exploration of Microsoft Sentinel's features and functionalities.*
-
-Following these steps ensures a comprehensive understanding of the deployment process and sets the stage for effective monitoring and management of Microsoft Sentinel and associated resources.
 
 ## Part 4: Exploring Created Cloud SIEM Solution
 
 ### Step 1: Accessing Microsoft Sentinel
 
-*Without delay, proceed to Microsoft Sentinel by searching for it and selecting your deployment.*
+*Proceed to Microsoft Sentinel by searching for it in the search bar*
 
-*Upon arrival at the overview section, gain insight into basic information about Microsoft Sentinel.*
+![image](https://i.imgur.com/t4xXh5F.png)
 
-*Utilize the left-hand menu, categorized into four sections: General, Management, Content Management, and Configuration.*
+Upon arrival at the overview section, gain insight into basic information about Microsoft Sentinel.
+
+Utilize the left-hand menu, categorized into four sections: General, Management, Content Management, and Configuration.
 
 ### Step 2: Exploring Logs
 
 *Navigate to the "Logs" tab to search for data using the Kusto Query Language (KQL).*
 
-*Data is organized into various tables, accessible by clicking the triangle icon.*
+![image](https://i.imgur.com/FqvqMWW.png)
+
+Data is organized into various tables, accessible by clicking the triangle icon.
 
 *Note that some tables may not yet be present due to incomplete data ingestion.*
 
-*Explore tables such as Azure Activity and Interactive User Sign-Ins, providing insights into portal actions and authentication details.*
+Explore tables such as Azure Activity and Interactive User Sign-Ins, providing insights into portal actions and authentication details.
 
 ### Step 3: Understanding Data Connectors
+
+*Navigate to the "Data connectors" section"
+
+![image](https://i.imgur.com/glYTS2e.png)
 
 *Observe the status of data connectors, typically ranging from 9 to 10 connected connectors.*
 
@@ -177,27 +177,31 @@ Following these steps ensures a comprehensive understanding of the deployment pr
 
 *Click on each connector for detailed information, including data type, log count, and populated tables.*
 
+![image](https://i.imgur.com/UXepV1a.png)
+
 ### Step 4: Analyzing Analytics
 
 *Navigate to the "Analytics" tab, where the core detection rules are implemented.*
 
-*Benefit from the deployment of 339 detection rules, aiding in threat monitoring and detection.*
+![image](https://i.imgur.com/UEJrIlI.png)
 
-*Review examples of detection rules, such as network port sweeps and suspicious application content.*
+Benefit from the deployment of 339 detection rules, aiding in threat monitoring and detection.
 
-*Acknowledge the importance of these rules in initiating threat detection within Microsoft Sentinel.*
+Review examples of detection rules, such as network port sweeps and suspicious application content.
 
 ### Step 5: Addressing Anomalies
 
 *Explore the "Anomalies" section, where robust anomaly detection templates are employed.*
 
+![image]()
+
 *Recognize the use of user and entity behavior analytics (UEBA) for anomaly detection.*
 
 *Prepare to address any anomalies and fine-tune thresholds to minimize false positives.*
 
-*Note the current issue with UEBA and prioritize resolving it as the initial task within Microsoft Sentinel.*
+![image]()
 
-By following these steps, you gain insight into the key functionalities and components of Microsoft Sentinel, setting the stage for effective threat monitoring and management.
+*Note the current issue with UEBA and prioritize resolving it as the initial task within Microsoft Sentinel.*
 
 ## Part 5: Enable Artificial Intelligence in SIEM
 
