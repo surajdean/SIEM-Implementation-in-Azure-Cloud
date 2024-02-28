@@ -1,6 +1,6 @@
 # SIEM-Implementation-in-Azure-Cloud
 
-In this guide, fill in later
+In this guide, we'll dive into deploying a security information and event management (SIEM) solution in Azure Cloud, boosting your hands-on experience. You'll implement advanced techniques to enhance threat detection capabilities, while gaining practical skills in remediation actions to resolve cyber security incidents effectively. From configuring the SIEM to analyzing security events, you'll strengthen your expertise in cyber defense. Get ready to elevate your cybersecurity skills and tackle real-world challenges head-on!
 
 ## Tools Used
 
@@ -8,57 +8,26 @@ In this guide, fill in later
 
 ## Environments Used
 
-- 
+- Azure cloud
+- Microsoft Sentinel
 
 ## Part 1: Setup Lab Resources
 
-### Step 1: Prepare for Deployment
-
 Ensure you have a free Azure subscription for deploying Microsoft Sentinel.
 
-If you don't have an Azure account, register for one using the provided link.
+If you don't have an Azure account, register [here](https://azure.microsoft.com/en-us/free/).
 
-*Access the official GitHub repository for Sentinel all-in-one deployment provided in the resources.*
-
-### Step 2: Understanding Sentinel All-in-One
+We will be using Microsoft Sentinel All-in-One for this project.
 
 Sentinel all-in-one is an official Microsoft solution designed to expedite the deployment process of Microsoft Sentinel.
 
-Version two, released in April 2023, streamlines initial configuration tasks for Sentinel.
-
-While manual configuration of Microsoft Sentinel is an option, this solution simplifies and accelerates the process significantly.
+hile manual configuration of Microsoft Sentinel is an option, this solution simplifies and accelerates the process significantly.
 
 The deployment option encompasses various features, including workspace retention settings, daily cap, commitment tiers, user and entity behavior analytics, and health diagnostics for analytics rules and data connectors.
 
-### Step 3: Exploring Features
-
-Content Hub solutions provided within the deployment offer pre-configured packages of analytics, rules, dashboards, and automation tasks specific to Microsoft Sentinel.
-
-Data connectors from sources such as Azure Active Directory and Microsoft 365 Defender are enabled, facilitating immediate data ingestion from diverse sources.
-
-Analytics rules utilizing selected data connectors with severity filtering are also activated.
-
-### Step 4: Deploying Microsoft Sentinel
-
-*Navigate to the deployment option provided in the GitHub repository.*
-
-*Review the supported connectors listed, ensuring compatibility with your requirements.*
-
-*Note that some connectors may require licenses, but this deployment project is entirely free.*
-
-*Microsoft Sentinel offers ten gigabytes of free data ingestion per day for the first month, providing ample time to familiarize yourself with the platform.*
-
-*Deploy Microsoft Sentinel to your Azure environment following the instructions provided in the repository.*
-
-### Step 5: Post-Deployment Considerations
-
-*Once Microsoft Sentinel is deployed and configured, explore its functionalities and capabilities.*
-
-*Take advantage of the pre-configured analytics rules, dashboards, and automation tasks provided by Content Hub solutions.*
+*Access the official GitHub repository for Sentinel All-in-One deployment [here](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Sentinel-All-In-One)*
 
 *In case of any questions or issues during deployment or usage, refer to the resources provided in the GitHub repository or seek assistance from Microsoft support.*
-
-By following these steps, you'll be able to efficiently deploy Microsoft Sentinel using the all-in-one solution, leveraging its features for enhanced threat detection and response capabilities within your Azure environment.
 
 ## Part 2: Create SIEM in Azure Cloud
 
@@ -66,13 +35,13 @@ By following these steps, you'll be able to efficiently deploy Microsoft Sentine
 
 *Click on the "Deploy to Azure" button to initiate the deployment process for Microsoft Sentinel.*
 
-*This action redirects you to the Azure portal, where you'll deploy Microsoft Sentinel using a predefined template.*
+![image](https://i.imgur.com/vfXaCSc.png)
+
+This action redirects you to the Azure portal, where you'll deploy Microsoft Sentinel using a predefined template.
 
 ### Step 2: Selecting Location and Configuration
 
-*Choose the location for deployment, considering factors such as regulatory requirements and cost implications.*
-
-*Opt for a location closest to your operational area. For example, North Europe.*
+*Choose the location for deployment, considering factors such as regulatory requirements and cost implications.  Opt for a location closest to your operational area.*
 
 *Define the resource group and workspace name, ensuring they reflect the purpose of the solution. For this demonstration, name it "Security Monitoring."*
 
@@ -86,6 +55,8 @@ By following these steps, you'll be able to efficiently deploy Microsoft Sentine
 
 *Enable Sentinel Health Diagnostics under Settings to monitor the health of Microsoft Sentinel.*
 
+![image](https://i.imgur.com/it8ZWag.png)
+
 *Optionally enable artificial intelligence and user/entity behavior analytics for advanced threat detection.*
 
 ### Step 5: Exploring Content Hub and Data Connectors
@@ -94,7 +65,11 @@ By following these steps, you'll be able to efficiently deploy Microsoft Sentine
 
 *Select all solutions within each category for comprehensive monitoring.*
 
+![image](https://i.imgur.com/0rcwc3m.png)
+
 *Choose data connectors based on your data sources, prioritizing Azure Active Directory for sign-in data.*
+
+![image](https://i.imgur.com/WnNLq6Q.png)
 
 *Even if lacking licenses, select all data connectors for future scalability.*
 
@@ -103,6 +78,8 @@ By following these steps, you'll be able to efficiently deploy Microsoft Sentine
 *Check the box to enable analytics rules, which automate threat detection.*
 
 *Select severity levels such as low and information to encompass all threat categories.*
+
+![image](https://i.imgur.com/AhhuBIw.png)
 
 ### Step 7: Review and Deployment
 
