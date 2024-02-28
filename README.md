@@ -193,41 +193,37 @@ Review examples of detection rules, such as network port sweeps and suspicious a
 
 *Explore the "Anomalies" section, where robust anomaly detection templates are employed.*
 
-![image]()
+![image](https://i.imgur.com/HhAeXbU.png)
 
-*Recognize the use of user and entity behavior analytics (UEBA) for anomaly detection.*
-
-*Prepare to address any anomalies and fine-tune thresholds to minimize false positives.*
-
-![image]()
-
-*Note the current issue with UEBA and prioritize resolving it as the initial task within Microsoft Sentinel.*
+You can see that it uses user and entity behavior analytics (UEBA) for anomaly detection.
 
 ## Part 5: Enable Artificial Intelligence in SIEM
 
 ### Step 1: Enabling User and Entity Behavior Analytics (UEBA)
 
-*Begin by exploring the User and Entity Behavior Analytics (UEBA) feature, which utilizes AI to detect and alert users to any unusual behavior within the system.*
+We will be turning on the User and Entity Behavior Analytics (UEBA) feature, which utilizes AI to detect and alert users to any unusual behavior within the system.
 
 *Access the settings section to enable this feature. Navigate to settings and locate the "User and Entity Behavior Analytics" button.*
 
+![image](https://i.imgur.com/wOYcjPd.png)
+
 *Click on "User and Entity Behavior Analytics" and proceed to select "Azure Active Directory," applying it to existing data sources to activate the AI-powered detection capabilities.*
+
+![image](https://i.imgur.com/u3p0AtY.png)
 
 ### Step 2: Configuring Automation Playbooks
 
-*While in the settings section, configure Microsoft Sentinel to use automation playbooks for enhanced operational efficiency.*
+While in the settings section, we will configure Microsoft Sentinel to use automation playbooks for enhanced operational efficiency.
 
 *Grant permissions to Microsoft Sentinel by navigating back one page and selecting the arrow next to the playbook permission option.*
 
+![image](https://i.imgur.com/DzuKbad.png)
+
 *Choose the resource group where Microsoft Sentinel is deployed and apply the necessary changes to configure permissions effectively.*
 
-### Step 3: Finalizing Setup
+![image](https://i.imgur.com/lTl8CdZ.png)
 
-*With UEBA enabled and automation playbooks configured, Microsoft Sentinel is now equipped with powerful capabilities.*
-
-*Prepare to create impactful artifacts within Microsoft Sentinel to enhance security operations and streamline workflows.*
-
-By following these steps, you have successfully enabled UEBA and configured automation playbooks within Microsoft Sentinel, setting the stage for enhanced security monitoring and response capabilities. Stay tuned for the next video, where you'll delve into the creation and utilization of watchlists to further bolster your security operations.
+By following these steps, you have successfully enabled UEBA and configured automation playbooks within Microsoft Sentinel, setting the stage for enhanced security monitoring and response capabilities.
 
 ## Part 6: Creating a Watchlist to Detect Cybersecurity Threats
 
@@ -235,11 +231,15 @@ By following these steps, you have successfully enabled UEBA and configured auto
 
 *Begin by navigating to the watchlist section in the configuration menu of Microsoft Sentinel.*
 
+![image](https://i.imgur.com/wSncpEe.png)
+
 *Click on "Add New" to create a new watchlist.*
 
-*Provide a name for the watchlist, such as "Tor Exit Nodes," and an alias that is easy to remember and will be used later in analytics rules.*
+![image](https://i.imgur.com/r3UbeSx.png)
 
-*You have the option to create the watchlist from a local file or from Azure Storage. Download the prepared CSV file containing all the Tor exit node IP addresses and drag it into the appropriate field.*
+*Provide a name for the watchlist and an alias that is easy to remember and will be used later in analytics rules.*
+
+*You have the option to create the watchlist from a local file or from Azure Storage. I will be using a CSV file of Tor exit nodes for my example.*
 
 *Validate the file preview to ensure correctness, then select a unique search key to optimize query performance.*
 
@@ -247,17 +247,9 @@ By following these steps, you have successfully enabled UEBA and configured auto
 
 Step 2: Viewing and Modifying Watchlists
 
-*After creating the watchlist, you can view it by selecting it from the watchlist section. Click on "View watchlist logs" to see the watchlist's contents presented in a SQL query syntax format.*
+*After creating the watchlist, you can view it by selecting it from the watchlist section. Click on "View watchlist logs" to see the watchlist's contents.*
 
-*Watchlists are easily modifiable. You can update them by selecting "Update watchlists" and "Edit watchlist items." This feature is particularly useful when multiple analytics rules use the same information, allowing for centralized updates.*
-
-Step 3: Moving Forward
-
-*With the watchlist for Tor exit nodes created and functional, the next step is to create an analytics rule to detect threats originating from the Tor network.*
-
-*Stay tuned for the next section, where we will dive into creating our first analytics rule to enhance threat detection capabilities within Microsoft Sentinel.*
-
-By following these steps, you have successfully created a watchlist for monitoring Tor exit nodes in Microsoft Sentinel, setting the stage for proactive threat detection and response. Stay tuned for the next video, where we'll continue to strengthen your security operations with analytics rules.
+Watchlists are easily modifiable. You can update them by selecting "Update watchlists" and "Edit watchlist items." This feature is particularly useful when multiple analytics rules use the same information, allowing for centralized updates.
 
 ## Part 7: Creating a Detection Rule For Cybersecurity Threat
 
@@ -265,17 +257,15 @@ By following these steps, you have successfully created a watchlist for monitori
 
 *Navigate to the configuration section of Microsoft Sentinel and select "Analytics."*
 
+![image](https://i.imgur.com/xOQhBuk.png)
+
 *Choose to add a new scheduled query rule.*
 
 *Provide an appropriate name for the rule, such as "Successful Sign-ins from Tor Network," and specify the relevant tactics and techniques. Adjust the severity level as needed.*
 
-*In the rule logic section, utilize Kql (Kusto Query Language) to specify the criteria for detecting threats. Begin by calling the watchlist function to retrieve a list of IP addresses.*
+*In the rule logic section, utilize Kql (Kusto Query Language) to specify the criteria for detecting threats.
 
-*Specify the table to be used for data retrieval, such as the signing log table, which contains all signing events.
-
-*Refine the query to filter results based on the IP address field and include only matches found in the watchlist.*
-
-*Further filter results for failed logins and customize the columns to display using the project argument.*
+![image](https://i.imgur.com/LxndNra.png)
 
 *Test the query with current data to evaluate potential alerts generated per day.*
 
@@ -293,37 +283,43 @@ Step 2: Testing and Verification
 
 *After creating the analytics rule, search for it in Microsoft Sentinel to confirm its creation.*
 
-*Upon successful creation, proceed to test the rule by creating a new account and signing in from an anonymous IP address, triggering the analytics rule to detect the threat.*
+![image](https://i.imgur.com/SkA7qQE.png)
 
-By following these steps, you have successfully created an analytics rule in Microsoft Sentinel to detect threats originating from the Tor network. Stay tuned for the next video, where we'll test the rule and explore its effectiveness in threat detection.
+*Upon successful creation, proceed to test the rule by creating a new account and signing in from an anonymous IP address, triggering the analytics rule to detect the threat.*
 
 ## Part 8: Creating a User Account in Azure for SIEM Investigation
 
 ### Step 1: Preparation and Account Creation
 
-*Start by disabling security defaults in Azure AD to avoid any potential interruptions.*
+Start by disabling security defaults in Azure AD to avoid any potential interruptions.
 
 *Navigate to Azure Active Directory and select "Properties." Scroll down to "Manage Security Defaults" and change the status from enabled to disabled. Provide a reason, such as "testing," and save the changes.*
+
+![image](https://i.imgur.com/poDuBua.png)
 
 *With security defaults disabled, proceed to create a new user account.*
 
 *Navigate to "Users" under "Manage" in Azure AD, then select "Create new user."*
 
-*Enter a user principal name (e.g., Ozai), generate a new password, and enable the account. Fill in basic details such as job title and company name.*
+*Enter a user principal name , generate a new password, and enable the account. Fill in basic details such as job title and company name.*
 
 *After completing the user creation process, copy the user principal name and password for future use.*
 
 ### Step 2: Role Assignment
 
 *Assign roles to the newly created user.*
+
 *Go back to the user list, select the created user, and click on "Add assignment" under the "Manage" section.*
+
 *Search for roles such as "Security Reader" and "Contributor" for Azure resources.*
+
+![image](https://i.imgur.com/Mc6B1o8.png)
 
 *Assign the appropriate roles, ensuring that the user has the necessary permissions for the intended tasks.*
 
-Step 3: Logging In and Testing
+### Step 3: Logging In and Testing
 
-*Log in to the newly created account using the provided credentials. Use a different browser window for distinction.*
+Log in to the newly created account using the provided credentials. Use a different browser window for distinction.
 
 *Attempt to log in with both a secure and insecure password to observe Microsoft's password policy in action.*
 
@@ -337,78 +333,61 @@ By following these steps, you have prepared the environment and created a new us
 
 ### Step 1: Accessing Azure Portal
 
-*Put on the hacker hat and open the Brave browser for anonymity.*
+Put on the hacker hat and open the Brave browser for anonymity.
 
 *Create a new private window with Tor in the Brave browser.*
 
 *Access the Azure portal and use the credentials of the newly created account to log in.*
 
+![image](https://i.imgur.com/oJT4FI4.png)
+
 ### Step 2: Perform Malicious Activities
 
-*As an attacker, establish persistence by changing the password. Navigate to the account settings and select "Change password." Provide the old and a new complex password.*
+As an attacker, establish persistence by changing the password. 
+
+*Navigate to the account settings and select "Change password." Provide the old and a new complex password.*
+
+https://i.imgur.com/Fyv1nhi.png
+
+Another action an attacker might do would be to disable diagnosic settings.
 
 *Disable diagnostic settings in the resource group and Microsoft Sentinel to avoid detection. Delete diagnostic settings for both.*
 
-*Attempt to tamper with auditing and health monitoring settings in Microsoft Sentinel. Try clicking on "Configure" to access settings.*
-
-*Consider using the Azure Portal's Web shell interface to run scripts for escalating privileges or performing crypto mining activities.*
-
-*Optionally, create a virtual machine (VM) for generating additional logs in the environment. Choose a generic name to conceal actions.*
-
-### Step 3: Accessing Cloud Shell
-
-*Click on the Cloud Shell button and select PowerShell.*
-
-*Attempt to create a new storage account to store files and scripts. Use existing resource groups if necessary.*
-
-### Step 4: Wait for Detection
-
-*After performing malicious activities, wait for Microsoft Sentinel to detect threats. Detection rules run every five minutes.*
-
-*Take a break and return later to explore newly created incidents in Microsoft Sentinel.*
-
-*Prepare to respond to detected threats effectively in the next steps.*
+Consider using the Azure Portal's Web shell interface to run scripts for escalating privileges or performing crypto mining activities.
 
 By following these steps, you can simulate malicious activities and assess Microsoft Sentinel's ability to detect and respond to security threats effectively.
 
 ## Part 10: Exploring Created Cybersecurity Incidents in SIEM
 
-Investigating Incidents in Microsoft Sentinel
+Let's dive into investigating incidents.
 
-Accessing Incidents Dashboard:
+### Accessing Incidents:
 
-Open Microsoft Sentinel.
-Observe that there are 17 new incidents in the dashboard.
-Note that the incidents are in the "New" state, indicating that no one is currently working on them.
-Choose to manage incidents or navigate through the threat management tab to access incidents.
+Upon logging in, navigate to the dashboard. Here, you'll notice the number of new incidents displayed.
 
-Prioritizing Incidents:
+### Prioritizing Incidents:
 
-Prioritize incidents based on severity, with a focus on those with the highest severity.
-For example, prioritize incidents related to successful sign-ins from the Tor network due to their potential impact.
+To prioritize incidents, focus on those with the highest severity. Click on "Manage incidents" or navigate through the "Threat Management" tab and select "Incidents."
 
-Reviewing Incident Details:
+### Analyzing Incidents:
 
-Observe that incidents include various types of security alerts, such as user account creation without expected attributes, service principal authentication attempts from new countries, anomalous single-factor sign-ins, etc.
-Investigate each incident to understand its nature and potential correlation with others.
+Review the incidents listed in the table. Pay attention to details such as IP addresses and time ranges. Note any anomalies or patterns.
 
-Identifying Correlation Issues:
+### Understanding Incident Relationships:
 
-Note that incidents lack entities, which hinders correlation and consolidation of related alerts.
-Understand that proper entity configuration is crucial for effective incident correlation.
+Explore related incidents and their commonalities. Understand why multiple incidents occur and their correlation.
 
-Starting the Investigation:
+### Initiating Investigation:
 
-Select multiple incidents for investigation by clicking on the checkbox next to each incident.
-Click on "Action" and assign the incidents to yourself, changing their status to "Active" to initiate investigation.
-Establish accountability by ensuring clear ownership of each incident.
+To start the investigation, select the incidents you want to investigate by checking the boxes. Click on "Action" and assign an owner and status (e.g., Active).
 
-Initiating Investigation Process:
+### Establishing Accountability:
 
-Click on any selected incident to view its brief description.
-Choose to view full details to access comprehensive information about the incident, including affected entities, timestamps, and severity.
+Assigning incidents ensures clear accountability within the team. It prevents confusion about who is responsible for resolving each incident.
 
-By following these steps, you can effectively navigate and investigate incidents in Microsoft Sentinel, ensuring prompt response and resolution to potential security threats.
+### Investigating Incidents:
+
+Click on an incident to view a brief description on the right side. Select "View full details" for more information. Begin the investigation process by analyzing the incident details.
 
 ## Part 11: How to Investigate Cybersecurity Incidents in SIEM
 
