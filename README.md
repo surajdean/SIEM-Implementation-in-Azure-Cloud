@@ -7,10 +7,6 @@ In this guide, we'll dive into deploying a security information and event manage
 - Azure cloud
 - Microsoft Sentinel
 
-## Environments Used
-
-- 
-
 ## Part 1: Setup Lab Resources
 
 Ensure you have a free Azure subscription for deploying Microsoft Sentinel.
@@ -434,39 +430,3 @@ Review each activity log thoroughly. Pay attention to operation names, activity 
 ### Deciding Next Steps:
 
 Based on the evidence gathered, it's time to decide on the next course of action. Consider factors like the user's role, department, and the severity of the incident. In some cases, disabling the account may be necessary to prevent further damage.
-
-## Part 12: How to Remediate Cybersecurity Incident
-
-Securing Your Azure Environment
-
-Disabling Compromised Account:
-
-Access Azure Active Directory and navigate to the users section.
-Locate the compromised account by its acronym (e.g., O.C.).
-Click on the account and choose the option to edit.
-Uncheck the "enable" status and save the changes to disable the account.
-
-Deleting Virtual Machine:
-
-Search for virtual machines in Azure.
-Locate the VM that poses a threat and delete the resource.
-
-Enabling Diagnostic Settings:
-
-Search for a log analytics workspace and select the instance.
-Add diagnostic settings to enable logging for all relevant logs.
-Set the destination as the log analytics workspace for Microsoft Sentinel and save the changes.
-
-Enabling Auditing and Health Monitoring in Sentinel:
-
-Access Microsoft Sentinel from the dashboard and navigate to settings.
-Enable auditing and health monitoring to ensure comprehensive monitoring of the environment.
-
-Closing Incidents:
-
-Close all incidents assigned for investigation.
-Select the incidents, click on actions, and change the status to closed.
-Choose the appropriate classification reason (e.g., true positive, suspicious activity).
-Add a comment summarizing the findings and actions taken before applying the changes.
-
-By following these steps, you have effectively identified and remediated a threat within your Azure environment using Microsoft Sentinel. Adding comments to incidents and maintaining a record of findings is essential for future investigations and knowledge sharing among analysts. Closing incidents ensures that all identified threats are properly addressed and mitigated.
