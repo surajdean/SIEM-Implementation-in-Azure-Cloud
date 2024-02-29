@@ -1,6 +1,6 @@
 # SIEM-Implementation-in-Azure-Cloud
 
-In this guide, we'll dive into deploying a security information and event management (SIEM) solution in Azure Cloud, boosting your hands-on experience. You'll implement advanced techniques to enhance threat detection capabilities, while gaining practical skills in remediation actions to resolve cyber security incidents effectively. From configuring the SIEM to analyzing security events, you'll strengthen your expertise in cyber defense. Get ready to elevate your cybersecurity skills and tackle real-world challenges head-on!
+In this guide, we'll dive into deploying a security information and event management (SIEM) solution in Azure Cloud, boosting your hands-on experience. You'll implement advanced techniques to enhance threat detection capabilities, while gaining practical skills in remediation actions to resolve cyber security incidents effectively. From configuring the SIEM to analyzing security events, you'll strengthen your expertise in cyber defense.
 
 ## Tools Used
 
