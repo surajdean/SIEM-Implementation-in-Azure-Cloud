@@ -347,7 +347,7 @@ As an attacker, establish persistence by changing the password.
 
 *Navigate to the account settings and select "Change password." Provide the old and a new complex password.*
 
-https://i.imgur.com/Fyv1nhi.png
+![image](https://i.imgur.com/Fyv1nhi.png)
 
 Another action an attacker might do would be to disable diagnosic settings.
 
@@ -391,50 +391,49 @@ Click on an incident to view a brief description on the right side. Select "View
 
 ## Part 11: How to Investigate Cybersecurity Incidents in SIEM
 
-Investigating Incidents in Microsoft Sentinel
+Now let's dive into the incident investigation process.
 
-Incident Overview:
+![image](https://i.imgur.com/sYnYcuY.png)
 
-The incident window is divided into three sections.
-On the left side, essential details about the incident are displayed, including a brief summary and information about the entities involved, such as the username and IP address.
+### Understanding Incident Details:
 
-Accessing Evidence:
+The incident window is divided into three sections. On the left side, you'll find essential details about the incident, including a summary and entities involved, such as usernames and IP addresses.
 
-Evidence includes events, alerts, and bookmarks related to the incident.
-Clicking on any entity reveals more details. For example, clicking on events reveals specific events related to the incident.
+### Accessing Evidence:
 
-Verifying IP Address:
+You'll also have access to evidence, including events, alerts, and bookmarks. Clicking on any entity will reveal more details. For example, clicking on an event will display results in a new window.
 
-Copy the IP address associated with the incident and check it using a freely available service like Abuse IPDB.
-Confirm that the IP address is related to Tor exit nodes and view relevant reports.
+### Analyzing Results:
 
-Adjusting Query for Result Type:
+From the results, you can gather crucial information. For instance, you may discover that a successful login originated from a suspicious IP address, such as one associated with Tor exit nodes.
 
-Notice that the log doesn't indicate a successful login due to a flaw in the query.
-Remove the project argument from the query to display the result type.
-Confirm that the login was successful.
+### Using External Tools:
 
-Analyzing User Login History:
+To further investigate, you might use external tools like abuse.ipdb to check if the IP address is malicious. Simply copy and paste the address into the tool to retrieve relevant reports.
 
-Adjust the query to check the user's login history for the past week.
-Examine the login locations and identify any anomalies, such as logins from different countries or Tor exit nodes.
+### Refining Query Results:
 
-Investigating User Activities:
+As you analyze logs, you may notice discrepancies or missing information. Adjust your query parameters to refine the results. For example, removing certain arguments can clarify the event's outcome.
 
-Explore other activities related to the user, such as role assignments and Azure activity.
-Use the entity behavior section to search for and select the user to view all activities in one place.
+### Exploring User Activity:
 
-Reviewing Azure Activity Logs:
+Dig deeper into the user's activity to identify patterns or anomalies. You can search for the user's activities within Microsoft Sentinel or through incident investigation. This helps consolidate all user-related activities for better analysis.
 
-Analyze Azure activity logs to understand the user's actions, such as attempts to delete resource diagnostic settings and create storage accounts.
-Identify successful and unsuccessful actions performed by the user.
+### Examining Graphical Representations:
 
-Deciding Next Actions:
+Graphs and timelines provide a visual representation of user activities and alerts. By examining these graphs, you can spot trends or irregularities in the user's behavior.
 
-Consider the user's department and role responsibilities to determine if the activities are suspicious.
-Decide to disable the account to prevent further unauthorized access and lateral movement.
+### Understanding Query Complexity:
 
-By following these steps, you can thoroughly investigate incidents in Microsoft Sentinel and take appropriate actions to secure your system.
+Queries may contain multiple lines and combine different tables. Understanding query complexity is essential for interpreting results accurately.
+
+### Reviewing Activity Logs:
+
+Review each activity log thoroughly. Pay attention to operation names, activity statuses, and associated services. This information helps you understand the user's actions within the system.
+
+### Deciding Next Steps:
+
+Based on the evidence gathered, it's time to decide on the next course of action. Consider factors like the user's role, department, and the severity of the incident. In some cases, disabling the account may be necessary to prevent further damage.
 
 ## Part 12: How to Remediate Cybersecurity Incident
 
